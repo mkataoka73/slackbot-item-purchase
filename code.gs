@@ -1,5 +1,5 @@
-function testHello(text) {
-  const url = 'https://hooks.slack.com/services/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';
+function postToSlack_(text) {
+  const url = ScriptProperties.getProperty('WEBHOOK_URL');
 
   const params = {
     method: 'post',
@@ -9,7 +9,7 @@ function testHello(text) {
   UrlFetchApp.fetch(url, params);
 }
 
-function testSlack() {
+function test_postToSlack() {
   const text = 'Hello World!';
-  testHello(text);
+  postToSlack_(text);
 }
