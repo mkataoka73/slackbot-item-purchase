@@ -8,3 +8,5 @@ SlackとGASで物品購入用の申請BOTを作ります。
 - ボタンを押すと申請者に通知がいく
 
 このような実装を作りたいです。
+
+<a href="https://www.flaticon.com/free-icons/chatbot" title="chatbot icons">Chatbot icons created by Freepik - Flaticon</a>
