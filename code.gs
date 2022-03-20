@@ -17,63 +17,50 @@ function test_postToSlack() {
 
 function makeBlockKit_() {
   const blocks =  [
-        {
-          "type": "section",
-          "text": {
-            "type": "mrkdwn",
-            "text": "You have a new request:\n*<fakeLink.toEmployeeProfile.com|Fred Enriquez - New device request>*"
-          }
-        },
-        {
-          "type": "section",
-          "fields": [
-            {
-              "type": "mrkdwn",
-              "text": "*Type:*\nComputer (laptop)"
-            },
-            {
-              "type": "mrkdwn",
-              "text": "*When:*\nSubmitted Aut 10"
-            },
-            {
-              "type": "mrkdwn",
-              "text": "*Last Update:*\nMar 10, 2015 (3 years, 5 months)"
-            },
-            {
-              "type": "mrkdwn",
-              "text": "*Reason:*\nAll vowel keys aren't working."
-            },
-            {
-              "type": "mrkdwn",
-              "text": "*Specs:*\n\"Cheetah Pro 15\" - Fast, really fast\""
-            }
-          ]
-        },
-        {
-          "type": "actions",
-          "elements": [
-            {
-              "type": "button",
-              "text": {
-                "type": "plain_text",
-                "emoji": true,
-                "text": "Approve"
-              },
-              "style": "primary",
-              "value": "click_me_123"
-            },
-            {
-              "type": "button",
-              "text": {
-                "type": "plain_text",
-                "emoji": true,
-                "text": "Deny"
-              },
-              "style": "danger",
-              "value": "click_me_123"
-            }
-          ]
-        }
-      ];
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "新しい物品購入リクエストがあります！"
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*申請者:*\n{申請者}\n*タイトル:*\n{物品名}\n*単価:*\n{単価}\n*用途:*\n{用途}\n*参考URL:*\n{URL}"
+			},
+			"accessory": {
+				"type": "image",
+				"image_url": "https://api.slack.com/img/blocks/bkb_template_images/approvalsNewDevice.png",
+				"alt_text": "computer thumbnail"
+			}
+		},
+		{
+			"type": "actions",
+			"elements": [
+				{
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"emoji": true,
+						"text": "Approve"
+					},
+					"style": "primary",
+					"value": "click_me_123"
+				},
+				{
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"emoji": true,
+						"text": "Deny"
+					},
+					"style": "danger",
+					"value": "click_me_123"
+				}
+			]
+		}
+	];
   return blocks;
 }
