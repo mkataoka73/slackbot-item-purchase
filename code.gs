@@ -16,9 +16,7 @@ function test_postToSlack() {
 
 
 function makeBlockKit_() {
-  const blocks = [
-    {
-      "blocks": [
+  const blocks =  [
         {
           "type": "section",
           "text": {
@@ -76,8 +74,6 @@ function makeBlockKit_() {
             }
           ]
         }
-      ]
-    }
-  ];
+      ];
   return blocks;
 }
