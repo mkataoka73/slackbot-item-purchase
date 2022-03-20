@@ -1,9 +1,12 @@
 function getRequestInfo(e){
-  console.log(e);
+
+  // console.log(e);
+  
 }
 
 
 function test_getRequestInfo() {
+
   const e = {
   namedValues: { 
      '申請者名': [ 'モブプロ' ],
@@ -15,6 +18,8 @@ function test_getRequestInfo() {
      '用途': [ 'デュアルモニタリング' ]
     }
   };
+  
+  getRequestInfo(e);
 
 }
 
